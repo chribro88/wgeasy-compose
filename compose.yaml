@@ -15,6 +15,6 @@ services:
     volumes:
       - ${WG_PATH}:/etc/wireguard
     environment:
-      - WG_HOST=${WG_PATH}
+      - WG_HOST=${WG_HOST}
       - PASSWORD_HASH=${WG_PASSWORD_HASH}
     restart: always
