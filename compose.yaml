@@ -1,7 +1,6 @@
 services:
   wgeasy:
     image: ghcr.io/wg-easy/wg-easy:latest
-    network_mode: "bridge"
     container_name: wgeasy-server
     ports:
       - "51820:51820/udp"
