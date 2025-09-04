@@ -17,4 +17,15 @@ services:
     environment:
       - WG_HOST=${WG_HOST}
       - PASSWORD_HASH=${WG_PASSWORD_HASH}
+    networks:
+      wg-frontend:
+        ipv4_address: ${WG_IP}
     restart: always
+networks:
+  wg-frontend:
+    driver: bridge
+    internal: true
+    ipam:
+      driver: default
+      config:
+        - subnet: ${WG_SUBNET}
