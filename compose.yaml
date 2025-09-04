@@ -16,6 +16,7 @@ services:
     environment:
       - WG_HOST=${WG_HOST}
       - PASSWORD_HASH=${WG_PASSWORD_HASH}
+      - WG_DEFAULT_ADDRESS=${WG_DEFAULT_ADDRESS:-10.8.0.x}
     networks:
       wg-frontend:
         ipv4_address: ${WG_IP}
